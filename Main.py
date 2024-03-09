@@ -15,13 +15,13 @@ st.set_page_config(
     layout="wide",
 )
 # Path: Main.py
-#Author: Sergio Demis Lopez Martinez
+#Author: Pawan
 #------------------------------------------------------------
 #HEADER
 st.markdown('''
 Powered by Google AI <img src="https://seeklogo.com/images/G/google-ai-logo-996E85F6FD-seeklogo.com.png" width="20" height="20">
 , Streamlit and Python''', unsafe_allow_html=True)
-st.caption("By Sergio Demis Lopez Martinez")
+st.caption("By Pawan")
 
 #------------------------------------------------------------
 #LANGUAGE
