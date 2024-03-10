@@ -5,13 +5,10 @@ import re
 from PIL import Image
 import requests
 
-#Je t'aime plus que les mots,
-#Plus que les sentiments,
-#Plus que la vie elle-même
 
 st.set_page_config(
-    page_title="Google AI Chat",
-    page_icon="https://seeklogo.com/images/G/google-ai-logo-996E85F6FD-seeklogo.com.png",
+    page_title="Nemo",
+    page_icon="https://seeklogo.com/images/F/Finding_Nemo-logo-4D041797FC-seeklogo.com.png",
     layout="wide",
 )
 # Path: Main.py
@@ -19,7 +16,7 @@ st.set_page_config(
 #------------------------------------------------------------
 #HEADER
 st.markdown('''
-Powered by Google AI <img src="https://seeklogo.com/images/G/google-ai-logo-996E85F6FD-seeklogo.com.png" width="20" height="20">
+Powered by Old Monk <img src="https://banner2.cleanpng.com/20180630/rlg/kisspng-liqueur-old-monk-rum-mohan-meakin-distilled-bevera-old-monk-5b37954e2d95e1.6050627115303693581867.jpg" width="20" height="20">
 , Streamlit and Python''', unsafe_allow_html=True)
 st.caption("By Pawan")
 
@@ -27,13 +24,13 @@ st.caption("By Pawan")
 #LANGUAGE
 langcols = st.columns([0.2,0.8])
 with langcols[0]:
-  lang = st.selectbox('Select your language',
+  lang = st.selectbox('Amrika ka dalal',
   ('English', 'Español', 'Français', 'Deutsch',
   'Italiano', 'Português', 'Polski', 'Nederlands',
   'Русский', '日本語', '한국어', '中文', 'العربية',
   'हिन्दी', 'Türkçe', 'Tiếng Việt', 'Bahasa Indonesia',
   'ภาษาไทย', 'Română', 'Ελληνικά', 'Magyar', 'Čeština',
-  'Svenska', 'Norsk', 'Suomi', 'Dansk', 'हिन्दी', 'हिन्�'),index=1)
+  'Svenska', 'Norsk', 'Suomi', 'Dansk', 'हिन्दी', 'हिन्�'),index=0)
 
 if 'lang' not in st.session_state:
     st.session_state.lang = lang
@@ -246,7 +243,7 @@ if prompt:
     if lang == 'Español':
       spinertxt = 'Espera un momento, estoy pensando...'
     else:
-      spinertxt = 'Wait a moment, I am thinking...'
+      spinertxt = 'Ji pappa ji...'
     with st.spinner(spinertxt):
         if len(prmt['parts']) > 1:
             response = vision.generate_content(prmt['parts'],stream=True,safety_settings=[
